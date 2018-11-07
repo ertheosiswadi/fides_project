@@ -3,7 +3,7 @@ const http = require('http');
 const fs = require('fs');
 const db = require('./db.js');
 const matcher = require('./matcher.js');
-
+const PORT = process.env.PORT || 3003;
 const app = express();
 
 var bodyParser = require('body-parser');
@@ -81,6 +81,6 @@ function setHTMLFile(response, specifier){
 	response.end();	
 }
 
-app.listen(3003, () => {
+app.listen(PORT, () => {
 	console.log('server is live');
 });
