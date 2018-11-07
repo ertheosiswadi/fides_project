@@ -1,0 +1,68 @@
+Form:
+
+username: _
+	unique
+password: _
+email: _ 
+user_id: _ 
+	hashed from username
+type: Applicant/Employer
+
+
+Field 0: Favorite Food
+	type: mpc
+	0: Spaghetti
+	1: Pizza
+	2: Alfredo
+	3: Aglio
+	4: Olio
+
+Field 1: Foo Bar
+	type:mpc
+	0: Foo
+	1: Bar
+	2: Foobar
+
+Field 2: Endurance
+	type: number
+	unit: KM
+	range: 2
+	min: 0
+	max: 100
+
+Field 3: Skill
+	type: text
+	restrictions: [a-z]
+	max char length: 30
+
+data 1: employer
+1. name of company / string
+2. legal name of company / string > show on email to candidate
+3. company industry sector / drop down menu
+4. company region / drop down menu jakarta area (jakarta utara, barat, timur, selatan)
+5. company pos code / integer
+
+job requirement / offer:
+1. name of job / string > show on email to candidate
+2. required qualification / dropdown menu (SMA, S1, S2)
+3. Required Major background / dropdown menu (finance, management, psychology, engineering, accounting, international relations, architecture)
+4. Required GPA (IP) / dropdown menu (integer from 2 - 4) + range to dropdown menu (integer from 2 - 4)
+5. Salary offer / integer
+6. benefits given / checklist (insurance, parking, mobile phones, laptop)
+
+Data 2: candidate
+1. full name of employee / string
+2. nickname or call name / string > show on email to employer
+3. date of birth / drop down menu dd+MMM+YYYY (05 / Jan / 2018)
+4. Address / String
+5. Region / drop down menu jakarta area (jakarta utara, barat, timur, selatan)
+6. post code / integer
+7. qualification / dropdown menu (SMA, S1, S2)
+8. major background / dropdown menu (finance, management, psychology, engineering, accounting, international relations, architecture)
+9. GPA (IP) / dropdown menu (integer from 2 - 4) no range
+
+candidate wants:
+1. industry sector / dropdown menu
+2. Salary / dropdown menu + range to dropdown menu (in millions of rupiah)
+3. benefits wanted / checklist (insurance, parking, mobile phones, laptop)
+

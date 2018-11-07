@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Fides Form - Candidate</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+	<label for="employer_details"> Candidate Details: </label>
+	<hr>
+	<form id="employer_details">
+		Email:
+		<input id="candidate_email" type="email" name="candidate_email"><br>
+
+		Full Name:
+		<input id="full_name" type="text" name="full_name"><br>
+
+		Nickname:
+		<input id="nickname" type="text" name="nickname"><br>
+
+        <label for="birthdate">Birth Date: </label>
+		<input type="date" id="birthdate" name="birthdate"
+		value="2028-07-22"
+		min="1900-01-01" max="2020-12-31" /> <br>
+        
+        Address:
+		<input id="address" type="text" name="address"><br>
+
+		<div class="form-group">
+		<label for="company_region">Region:</label>
+		<select class="form-control" id="company_region">
+			<option>JAKUT</option>
+			<option>JABAR</option>
+			<option>JATIM</option>
+			<option>JAKSEL</option>
+		</select>
+		</div>
+
+		Pos Code:
+		<input type="number" name="candidate_poscode" placeholder="10510"><br>
+
+		<div class="form-group">
+		<label for="candidate_qualification">Candidate Qualification:</label>
+		<select class="form-control" id="candidate_qualification">
+			<option>SMA</option>
+			<option>S1</option>
+			<option>S2</option>
+		</select>
+		</div>
+
+		<div class="form-group">
+		<label for="candidate_major">Major Background:</label>
+		<select class="form-control" id="candidate_major">
+			<option>Finance</option>
+			<option>Management</option>
+			<option>Psychology</option>
+		</select>
+		</div>
+
+		<div class="form-group">
+		<label for="candidate_gpa">GPA:</label>
+		<select class="form-control" id="candidate_gpa">
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+		</select>
+		</div>
+	</form>
+	<br><br>
+
+	<label for="job_criteria"> Job Criteria: </label>
+	<hr>
+	<form id="job_criteria">
+	</form>
+
+	<br><button id="submit_button"> Submit </button>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="CandidateHandler.js"></script>
+	</body>
+</html>
+

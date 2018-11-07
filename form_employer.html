@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Fides Form - Employer</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+	<label for="employer_details"> Employer Details: </label>
+	<hr>
+	<form id="employer_details">
+		Name of Company:
+		<input id="name_of_company" type="text" name="name_of_company"><br>
+
+		Legal Name of Company:
+		<input id="legal_name_of_company" type="text" name="legal_name_of_company"><br>
+
+		<div class="form-group">
+		<label for="industry_sector">Company Industry Sector:</label>
+		<select class="form-control" id="industry_sector">
+			<option>Food & Beverage</option>
+			<option>Hospitality</option>
+		</select>
+		</div>
+
+		<div class="form-group">
+		<label for="company_region">Company Region:</label>
+		<select class="form-control" id="company_region">
+			<option>JAKUT</option>
+			<option>JABAR</option>
+			<option>JATIM</option>
+			<option>JAKSEL</option>
+		</select>
+		</div>
+
+		Company Pos Code:
+		<input type="number" name="company_poscode" placeholder="10510"><br>
+	</form>
+	<br><br>
+	<label for="job_criteria"> Job Offer/Requirements: </label>
+	<hr>
+	<form id="job_criteria">
+		Name of Job:
+		<input id="name_of_job" type="text" name="name_of_job"><br>
+
+		<div class="form-group">
+		<label for="required_qualification">Required Qualification:</label>
+		<select class="form-control" id="required_qualification">
+			<option>SMA</option>
+			<option>S1</option>
+			<option>S2</option>
+		</select>
+		</div>
+
+		<div class="form-group">
+		<label for="required_major">Required Major Background:</label>
+		<select class="form-control" id="required_major">
+			<option>Finance</option>
+			<option>Management</option>
+			<option>Psychology</option>
+		</select>
+		</div>
+
+		<div class="form-group">
+		<label for="required_gpa">Required GPA:</label>
+		<select class="form-control" id="required_gpa">
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+		</select>
+		</div>
+
+		Salary Offer:
+		<input type="number" name="salary_offer" placeholder="e.g. 9000000"><br>
+
+		Benefits:
+		<br>
+  		<input type="checkbox" name="insurance_benefit" id="insurance_benefit" value="Insurance"> Insurance<br>
+  		<input type="checkbox" name="parking_benefit" id="parking_benefit" value="Parking"> Parking<br>
+  		<input type="checkbox" name="phone_benefit" id="phone_benefit" value="Phone"> Mobile Phone<br>
+  		<input type="checkbox" name="laptop_benefit" id="laptop_benefit" value="Laptop"> Laptop<br>
+
+<!-- 		<input type="radio" name="gender" value="male" checked> Male<br>
+		<input type="radio" name="gender" value="female"> Female<br>
+		<input type="radio" name="gender" value="other"> Other -->
+	</form>
+	<br><button id="submit_button"> Submit </button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="EmployerHandler.js"></script>
+	</body>
+</html>
+
