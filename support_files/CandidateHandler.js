@@ -31,7 +31,7 @@ $(document).ready(function() {
 			postcode:postcode,
 			education:education,
 			major:major,
-			gpa:gpa
+			gpa:gpa,
 			salary:salary,
 			insurance:insurance,
 			parking: parking,
