@@ -27,6 +27,13 @@ function candidate(candidates, employers, uuid){
 			toReturn.push(employers[i])
 		}
 	}
+
+	//debug
+	if(toReturn.length == 0)
+	{
+		console.log('no match found')
+	}
+
 	return toReturn;
 }
 
@@ -46,7 +53,7 @@ function getCandidate(candidates, uuid)
 
 function getCandidateProperties(c)
 {
-	var eform = c['form'];
+	var cform = c['form'];
 	var toReturn = {
 		region: cform['region'],
 		education:cform['education'],

@@ -14,6 +14,12 @@ app.use(express.static('./support_files'));
 var candidates = [];
 var employers = [];
 
+app.get('', (request, response) => {
+	response.set('Content-Type', 'text/html');
+	setHTMLFile(response, 2);
+	return response;
+});
+
 
 app.get('/form/:page', (request, response) => {
 	response.set('Content-Type', 'text/html');
@@ -71,6 +77,11 @@ function setHTMLFile(response, specifier){
 	{
 		filename = 'form_candidate';
 		filehandler = filehandler + '/CandidateHandler.js';
+	}
+	else if(specifier === 2)
+	{
+		filename = 'menu';
+		filehandler = filehandler + '/MenuHandler.js';
 	}
 	var fileContents = fs.readFileSync('./html/' + filename + '.html', {encoding: "utf8"});
 	response.write(fileContents);
