@@ -20,6 +20,11 @@ app.get('', (request, response) => {
 	return response;
 });
 
+app.get('/matched_candidates', (request, response) => {
+	response.set('Content-Type', 'text/html');
+	setHTMLFile(response, 3);
+	return response;
+});
 
 app.get('/form/:page', (request, response) => {
 	response.set('Content-Type', 'text/html');
@@ -82,6 +87,11 @@ function setHTMLFile(response, specifier){
 	{
 		filename = 'menu';
 		filehandler = filehandler + '/MenuHandler.js';
+	}
+	else if(specifier === 3)
+	{
+		filename = 'match_summary';
+		filehandler = filehandler + '/MatchSummaryHandler.js';
 	}
 	var fileContents = fs.readFileSync('./html/' + filename + '.html', {encoding: "utf8"});
 	response.write(fileContents);

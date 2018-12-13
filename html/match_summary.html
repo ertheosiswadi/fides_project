@@ -42,22 +42,15 @@
     <div class="jumbotron text-center">
       <div class="container">
         <h1>Fides Prototype</h1>
-        <p>...</p>
+        <p>Matched Candidates</p>
       </div>
     </div>
 
     <div class="container">
-      <div class="form-group">
-        <label>You are:</label>
-        <select class="form-control" id="select_role">
-          <option value="0">Applicant</option>
-          <option value="1">Employer</option>
-          <option value="2">Admin</option>
-        </select>
-      </div>
-      <div id="below_dropdown">
-        <button type="button" onclick="location.href='/form/candidate';" class="btn-lg btn-primary btn-block" id="button_form_c">Fill Form</button>
-      </div>
+      <div class="list-group" id="summary_table">
+          <a href="#" class="list-group-item active">Candidates</a>
+          <a href="#" class="list-group-item">Jayden</a>
+        </div>      
     </div> 
 
 
@@ -69,6 +62,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./js/bootstrap.min.js"></script>
-    <script src="/MenuHandler.js"></script>
+    <script src="./MatchSummaryHandler.js"></script>
   </body>
 </html>
