@@ -3,8 +3,6 @@ $(document).ready(function() {
 	var matchedEmployers = [];
 	$.get('/match/candidate/' + uuid, (data,status)=>{
 		matchedEmployers = data;
-		console.log(matchedEmployers[0]['form']);
-		console.log(matchedEmployers[0]['form']['company_name']);
 
 	   	if(matchedEmployers.length == 0 || matchedEmployers === 'Invalid UUID')
 	   	{
