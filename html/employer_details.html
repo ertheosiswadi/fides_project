@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fides</title>
+    <title>Fides - Employer Details</title>
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -42,16 +42,24 @@
     <div class="jumbotron text-center">
       <div class="container">
         <h1>Fides Prototype</h1>
-        <p>Matched Candidates</p>
+        <p>Employer Details</p>
       </div>
     </div>
 
     <div class="container">
-      <div class="list-group" id="summary_table">
-          <a href="#" class="list-group-item active">Candidates</a>
-          <a href="#" class="list-group-item">No Entries</a>
-        </div>      
-    </div> 
+      <ul class="list-group">
+        <li class="list-group-item active" id="company_name">Company Name</li>
+        <li class="list-group-item" id="sector"><b>Industry Sector: </b>Item Two</li>
+        <li class="list-group-item" id="region"><b>Region: </b>Item Three</li>
+        <li class="list-group-item" id="postcode"><b>Poscode: </b>Item Four</li>
+        <li class="list-group-item active">Job Requirements</li>
+        <!-- <li class="list-group-item" id=""><b>Job Title: </b>Item Four</li> -->
+        <li class="list-group-item" id="education"><b>Qualification: </b>Item Four</li>
+        <li class="list-group-item" id="major"><b>Major Background: </b>Item Four</li>
+        <li class="list-group-item" id="gpa"><b>GPA: </b>Item Four</li>
+        <li class="list-group-item" id="salary"><b>Salary Offer: </b>Item Four</li>
+      </ul>
+    </div>
 
 
     
@@ -62,6 +70,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./MatchSummaryHandler.js"></script>
+    <script src="./EmployerDetailsHandler.js"></script>
   </body>
 </html>

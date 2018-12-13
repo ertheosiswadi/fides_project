@@ -26,6 +26,12 @@ app.get('/matched_candidates', (request, response) => {
 	return response;
 });
 
+app.get('/employer_details', (request, response) => {
+	response.set('Content-Type', 'text/html');
+	setHTMLFile(response, 4);
+	return response;
+});
+
 app.get('/form/:page', (request, response) => {
 	response.set('Content-Type', 'text/html');
 	var page = request.params.page;
@@ -92,6 +98,11 @@ function setHTMLFile(response, specifier){
 	{
 		filename = 'match_summary';
 		filehandler = filehandler + '/MatchSummaryHandler.js';
+	}
+	else if(specifier === 4)
+	{
+		filename = 'employer_details';
+		filehandler = filehandler + '/EmployerDetailsHandler.js';
 	}
 	var fileContents = fs.readFileSync('./html/' + filename + '.html', {encoding: "utf8"});
 	response.write(fileContents);
