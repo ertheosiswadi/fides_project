@@ -56,8 +56,8 @@ app.get('/candidate', (request, response) => {
 
 app.post('/candidate', (request, response) => {
 	console.log(request.body.email);
-	db.append(candidates, request.body)
-	response.send(request.body);
+	let uuid = db.append(candidates, request.body)
+	response.send(uuid);
 });
 
 app.get('/employer', (request, response) => {

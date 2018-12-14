@@ -1,6 +1,6 @@
 console.log('I am in Employer Handler');
 $(document).ready(function() {
-
+	setGPAOptions();
 	$('#submit_button').click(function() {
 		var company_name = $('#name_of_company').val().toLowerCase() //text
 		var legal_name = $('#legal_name_of_company').val().toLowerCase() //text
@@ -51,5 +51,18 @@ $(document).ready(function() {
 
 		});		
 	})
-
+	function setGPAOptions()
+	{
+		var option = '';
+		for(i = 2; i <= 3; i++)
+		{
+			for(j=0; j < 10; j++)
+			{
+				option += '<option>'+ i + '.'+ j +'</option>'
+			}
+		}
+		option += '<option>'+ 4 + '.'+ 0 +'</option>'
+		console.log(option)
+		$('#required_gpa').html(option);
+	}
 });
