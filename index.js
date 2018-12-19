@@ -86,7 +86,7 @@ function setHTMLFile(response, specifier){
 	}
 	else if(specifier === 1)
 	{
-		filename = 'form_candidate';
+		filename = 'form_candidate_v2';
 		filehandler = filehandler + '/CandidateHandler.js';
 	}
 	else if(specifier === 2)
